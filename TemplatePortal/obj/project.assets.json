@@ -5229,11 +5229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\TemplatePortal.csproj",
+      "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\TemplatePortal.csproj",
       "projectName": "TemplatePortal",
-      "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\TemplatePortal.csproj",
+      "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\TemplatePortal.csproj",
       "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\obj\\",
+      "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5250,11 +5250,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj"
+            "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj": {
+              "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj": {
-              "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj"
+            "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj": {
+              "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj"
             }
           }
         }

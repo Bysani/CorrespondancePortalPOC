@@ -655,11 +655,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj",
+      "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\obj\\",
+      "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -676,8 +676,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj": {
-              "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj"
+            "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj": {
+              "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj"
             }
           }
         }
