@@ -44,7 +44,7 @@
             template.body = editorData;
             $.ajax({
                 type: 'POST',
-                url: '/Template/SendTemplate',
+                url: '/Template/SendTemplate?barCodeSelection=' + $("#txtPreference").val(),
                 data: template,
                 success: function (result) {
                     alert('Successfully received Data ');
@@ -56,6 +56,12 @@
                 }
             })
         }
+
+        $('#selPreference').on('change', function () {
+            var preference = $(this).val();
+            $("#txtPreference").val(preference);
+            $("#divPreferences").hide();
+        });
        
     </script>
 </head>
@@ -67,6 +73,24 @@
     <input type="text" id="txtDate" value="@Model.CreatedDate" style="display:none;" />
     <input type="text" id="txtId" value="@Model.Id" style="display:none;" />
     <input type="text" id="txtStatusId" value="@Model.StatusId" style="display:none;" />
+    <input type="text" id="txtPreference" value="" style="display:none;" />
+    <div id="divPreferences" style="display:none;">
+        <select id="selPreference">
+            <option id="QR Code" value="QR Code" >
+                QR Code
+            </option>
+            <option id="UPC A barcode" value="UPC A barcode" >
+                UPC A barcode
+            </option>
+            <option id="UPC E barcode" value="UPC E barcode" >
+                UPC E barcode
+            </option>
+            <option id="OMR barcode" value="OMR barcode" >
+                OMR barcode
+            </option>
+        </select>
+    </div>
+    <div></div>
     <script>
         var myEditor;
         // This sample still does not showcase all CKEditor 5 features (!)
@@ -185,11 +209,48 @@
         }).then(editor => {
             console.log('Editor was initialized', editor);
             myEditor = editor;
+            editor.editing.view.document.on('change:isFocused', (evt, data, isFocused) => {
+                const selection = evt.source.selection;
+                if (selection) {
+                    var selectedElement = selection.getSelectedElement();
+                    if (selectedElement != null && selectedElement.name === "figure") {
+                        var imageAttributes = selectedElement._children[0]._attrs;
+                        imageAttributes.forEach(item => {
+                            if (item && item == "imgDummyBarCode") {
+                                //$("#divPreferences").dialog("open");
+                                $("#divPreferences").show();
+                            }
+
+                        })
+                    }
+
+
+                    //var selectedElement = Array.from(selection.getSelectedBlocks())
+                    //if (selectedElement && selectedElement?.length > 0) {
+                    //    selectedElement.forEach(element => {
+                    //        if (element.name === "imageBlock") {
+                    //            element._attrs.forEach(item => {
+                    //                if (item && item === "/images/DummyBarCode.jpg" && dummyImageSelected === false) {
+                    //                    setDummyImageSelected(true);
+                    //                }
+                    //                else {
+                    //                    setDummyImageSelected(false)
+                    //                }
+                    //            })
+                    //        }
+                    //        else {
+                    //            setDummyImageSelected(false)
+                    //        }
+                    //    });
+                    //}
+                }
+            });
         })
             .catch(err => {
                 console.error(err.stack);
             });;
-            
+
+
     </script>
 
     <button id="btnTemplateSave" type="button" onclick="saveTemplateDetails()">Save Template</button>

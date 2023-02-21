@@ -35,7 +35,18 @@
                 title : 'Template Preview'
             });
 
-
+            $("#divPreferences").dialog({
+                draggable: true,
+                resizable: true,
+                show: 'Transfer',
+                hide: 'Transfer',
+                width: '50%',
+                height: 150,
+                autoOpen: false,
+                minHeight: 100,
+                minwidth: 100,
+                title: 'Preference'
+            });
         });
 
         function loadTemplateDetails(templateId) {
@@ -55,6 +66,8 @@
 
        </div>
     </div>
+
+    
     <h4>Template List</h4>
     <hr />
     <table cellpadding="0" cellspacing="0" class="container table table-bordered table-responsive table-hover">
