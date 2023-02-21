@@ -1,0 +1,13 @@
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\bin\Debug\netcoreapp3.1\SMTP.deps.json
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\bin\Debug\netcoreapp3.1\SMTP.dll
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\bin\Debug\netcoreapp3.1\SMTP.pdb
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\bin\Debug\netcoreapp3.1\EfDBContext.dll
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\bin\Debug\netcoreapp3.1\EfDBContext.pdb
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.csproj.AssemblyReference.cache
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.AssemblyInfoInputs.cache
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.AssemblyInfo.cs
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.csproj.CoreCompileInputs.cache
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.csproj.CopyComplete
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.dll
+C:\Users\bchaithanya\source\repos\TemplatePortal\SMTP\obj\Debug\netcoreapp3.1\SMTP.pdb

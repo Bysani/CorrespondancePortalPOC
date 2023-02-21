@@ -1,0 +1,9 @@
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\bin\Debug\netcoreapp3.1\EfDBContext.deps.json
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\bin\Debug\netcoreapp3.1\EfDBContext.dll
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\bin\Debug\netcoreapp3.1\EfDBContext.pdb
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.AssemblyInfoInputs.cache
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.AssemblyInfo.cs
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.csproj.CoreCompileInputs.cache
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.dll
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.pdb
