@@ -13,5 +13,9 @@ namespace DAL
         public Template SaveTemplate(Template template);
 
         public string GetTemplateBody(long templateId);
+
+        public List<TemplateFields> SaveTemplateFields(TemplateFields templateFields);
+
+        public Template GetTemplate(long templateId);
     }
 }

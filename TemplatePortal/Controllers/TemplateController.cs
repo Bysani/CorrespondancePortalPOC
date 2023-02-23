@@ -29,13 +29,20 @@ namespace TemplatePortal.Controllers
             _configuration = config;
         }
 
+        [Route("Template/CreateTemplate")]
+        public IActionResult CreateTemplate()
+        {
+            Template template = new Template();
+            return View(template);
+        }
 
         [Route("Template/TemplateList")]
         public IActionResult TemplateList()
         {
             string name = string.Empty;
             var templateList = _templateDAL.GetTemplateList(name).ToList();
-            return View("TemplateList",templateList);
+            templateList = GetTemplateListStatusName(templateList);
+            return View("TemplateList", templateList);
         }
 
         [HttpPost]
@@ -45,15 +52,22 @@ namespace TemplatePortal.Controllers
         }
 
 
+
         [Route("Template/TemplateDetails")]
         public IActionResult TemplateDetails(long templateId)
         {
-            var templateDetails = _templateDAL.GetTemplateList(string.Empty).FirstOrDefault(x => x.Id == templateId);
-            if(string.IsNullOrWhiteSpace(templateDetails.Body))
+            var templateDetails = _templateDAL.GetTemplate(templateId);
+            if (string.IsNullOrWhiteSpace(templateDetails.Body))
             {
                 templateDetails.Body = @"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><figure class=image><img id=imgDummyBarCode src=http://192.168.1.6:90/Images//DummyBarCode.jpg onclick=openPreferences()></figure><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
             }
             return View("TemplateDetails", templateDetails);
+        }
+
+        [Route("Template/SaveTemplateFields")]
+        public JsonResult SaveTemplateFields(TemplateFields templateFields)
+        {
+            return Json(_templateDAL.SaveTemplateFields(templateFields));
         }
 
         [HttpPost]
@@ -171,6 +185,38 @@ namespace TemplatePortal.Controllers
         {
             public string FileName { get; set; }
             public IFormFile FormFile { get; set; }
+        }
+
+        private List<Template> GetTemplateListStatusName(List<Template> templates)
+        {
+            foreach (var template in templates)
+            {
+                switch (template.StatusId)
+                {
+                    case 1:
+                        {
+                            template.StatusName = "Document Submission";
+                            break;
+
+                        }
+                    case 2:
+                        {
+                            template.StatusName = "Awaiting Approval";
+                            break;
+                        }
+                    case 3:
+                        {
+                            template.StatusName = "Closed";
+                            break;
+                        }
+                    default:
+                        {
+                            template.StatusName = "";
+                            break;
+                        }
+                }
+            }
+            return templates;
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\TemplatePortal.csproj": {}
+    "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\TemplatePortal.csproj": {}
   },
   "projects": {
-    "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj": {
+    "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-        "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj": {
-                "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj"
+              "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj": {
+                "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj": {
+    "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj",
+        "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj",
         "projectName": "EfDBContext",
-        "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj",
+        "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj",
         "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-        "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\obj\\",
+        "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -122,14 +122,14 @@
         }
       }
     },
-    "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj": {
+    "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj",
+        "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj",
         "projectName": "SMTP",
-        "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj",
+        "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj",
         "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-        "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\obj\\",
+        "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -146,8 +146,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj": {
-                "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj"
+              "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj": {
+                "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj"
               }
             }
           }
@@ -180,14 +180,14 @@
         }
       }
     },
-    "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\TemplatePortal.csproj": {
+    "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\TemplatePortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\TemplatePortal.csproj",
+        "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\TemplatePortal.csproj",
         "projectName": "TemplatePortal",
-        "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\TemplatePortal.csproj",
+        "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\TemplatePortal.csproj",
         "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-        "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\TemplatePortal\\obj\\",
+        "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\TemplatePortal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -204,11 +204,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\DAL\\DAL.csproj"
+              "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\DAL\\DAL.csproj"
               },
-              "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj": {
-                "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj"
+              "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj": {
+                "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj"
               }
             }
           }

@@ -98,3 +98,32 @@ REFERENCES [dbo].[Template] ([Id])
 GO
 ALTER TABLE [dbo].[TemplateChannel] CHECK CONSTRAINT [FK_TemplateChannel_Template]
 GO
+
+GO
+
+/****** Object:  Table [dbo].[TemplateFields]    Script Date: 23-02-2023 19:28:29 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TemplateFields](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[TemplateId] [bigint] NOT NULL,
+	[Title] [nvarchar](100) NULL,
+	[DataType] [nvarchar](50) NULL,
+	[IsMandatory] [bit] NOT NULL,
+ CONSTRAINT [PK_TemplateFields] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[TemplateFields]  WITH CHECK ADD  CONSTRAINT [FK_TemplateFields_Template] FOREIGN KEY([TemplateId])
+REFERENCES [dbo].[Template] ([Id])
+GO
+
+ALTER TABLE [dbo].[TemplateFields] CHECK CONSTRAINT [FK_TemplateFields_Template]
+GO

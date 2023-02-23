@@ -15,5 +15,7 @@ namespace EfDBContext
         public virtual DbSet<Template> Template { get; set; }
 
         public virtual DbSet<TemplateStatus> TemplateStatus { get; set; }
+
+        public virtual DbSet<TemplateFields> TemplateFields { get; set; }
     }
 }

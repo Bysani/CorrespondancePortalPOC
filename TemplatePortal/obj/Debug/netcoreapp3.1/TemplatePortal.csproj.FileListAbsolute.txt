@@ -61,7 +61,6 @@ C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcor
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\Temlpate\TemplateList.cshtml.g.cs
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\TemplatePortal.RazorTargetAssemblyInfo.cache
@@ -87,3 +86,4 @@ C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcor
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\Template\CreateTemplate.cshtml.g.cs

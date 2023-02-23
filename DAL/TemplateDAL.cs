@@ -27,6 +27,7 @@ namespace DAL
         {
             if (template.Id == 0)
             {
+                template.CreatedDate = DateTime.UtcNow;
                 _context.Template.Add(template);
             }
             else
@@ -41,6 +42,24 @@ namespace DAL
         {
             var templateDetails = _context.Template.FirstOrDefault(x => x.Id == templateId);
             return templateDetails != null && !string.IsNullOrWhiteSpace(templateDetails.Body) ? templateDetails.Body : "";
+        }
+
+        public List<TemplateFields> SaveTemplateFields(TemplateFields templateFields)
+        {
+            if(templateFields.Id == 0)
+            {
+                _context.TemplateFields.Add(templateFields);
+            }
+            else
+            {
+                _context.TemplateFields.Update(templateFields);
+            }
+            _context.SaveChanges();
+            return _context.TemplateFields.Where(x => x.TemplateId == templateFields.TemplateId).ToList();
+        }
+        public Template GetTemplate(long templateId)
+        {
+            return _context.Template.Include(x => x.templateFields).FirstOrDefault(x => x.Id == templateId);
         }
     }
 }

@@ -16,4 +16,12 @@
     <ProjectReference Include="..\SMTP\SMTP.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\Template.css" />
+  </ItemGroup>
+
 </Project>

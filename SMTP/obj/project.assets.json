@@ -655,11 +655,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj",
+      "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj",
       "projectName": "SMTP",
-      "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\SMTP.csproj",
+      "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\SMTP.csproj",
       "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-      "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\SMTP\\obj\\",
+      "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\SMTP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -676,8 +676,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj": {
-              "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj"
+            "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj": {
+              "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj"
             }
           }
         }

@@ -7,3 +7,4 @@ C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreap
 C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.csproj.CoreCompileInputs.cache
 C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.dll
 C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.pdb
+C:\Users\bchaithanya\source\repos\TemplatePortal\EfDBContext\obj\Debug\netcoreapp3.1\EfDBContext.csproj.AssemblyReference.cache

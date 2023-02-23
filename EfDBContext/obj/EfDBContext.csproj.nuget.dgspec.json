@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj": {}
+    "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj": {}
   },
   "projects": {
-    "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj": {
+    "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj",
+        "projectUniqueName": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj",
         "projectName": "EfDBContext",
-        "projectPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\EfDBContext.csproj",
+        "projectPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\EfDBContext.csproj",
         "packagesPath": "C:\\Users\\bchaithanya\\.nuget\\packages\\",
-        "outputPath": "D:\\TemplatePOC\\CorrespondancePortalPOC\\EfDBContext\\obj\\",
+        "outputPath": "C:\\Users\\bchaithanya\\source\\repos\\TemplatePortal\\EfDBContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bchaithanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
