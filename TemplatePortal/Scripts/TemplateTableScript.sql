@@ -127,3 +127,5 @@ GO
 
 ALTER TABLE [dbo].[TemplateFields] CHECK CONSTRAINT [FK_TemplateFields_Template]
 GO
+
+Alter table TemplateFields add  IsSelected bit not null default 0

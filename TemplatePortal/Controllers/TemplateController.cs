@@ -48,19 +48,24 @@ namespace TemplatePortal.Controllers
         [HttpPost]
         public JsonResult SaveTemplate(Template template)
         {
+            if(template.Id == 0)
+            {
+                string dummyImageURL = _configuration.GetValue<string>("Host:URL") + "Images//DummyBarCode.jpg";
+                template.Body = @"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><figure class=image image-style-align-right><img id=imgDummyBarCode src=" + dummyImageURL + " onclick=openPreferences()></figure><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
+            }
             return Json(_templateDAL.SaveTemplate(template));
         }
 
-
+        [HttpPost]
+        public JsonResult DeleteTemplate(Template template)
+        {
+            return Json(_templateDAL.DeleteTemplate(template));
+        }
 
         [Route("Template/TemplateDetails")]
         public IActionResult TemplateDetails(long templateId)
         {
             var templateDetails = _templateDAL.GetTemplate(templateId);
-            if (string.IsNullOrWhiteSpace(templateDetails.Body))
-            {
-                templateDetails.Body = @"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><figure class=image><img id=imgDummyBarCode src=http://192.168.1.6:90/Images//DummyBarCode.jpg onclick=openPreferences()></figure><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
-            }
             return View("TemplateDetails", templateDetails);
         }
 
@@ -74,22 +79,25 @@ namespace TemplatePortal.Controllers
         [Route("Template/SendTemplate")]
         public bool SendTemplate(Template template, string barCodeSelection)
         {
+            var templateDetails = _templateDAL.GetTemplate(template.Id);
+            template.templateFields = templateDetails.templateFields;
             string userName = _configuration.GetValue<string>("MailCredentialsSettings:Username");
             string password = _configuration.GetValue<string>("MailCredentialsSettings:Password");
             string hostName = _configuration.GetValue<string>("MailCredentialsSettings:Hostname");
+            string base64string = "";
 
             switch (barCodeSelection)
             {
                 case "UPC A barcode":
                     {
                         string fileName = barCodeSelection + template.Name + ".png";
-                        GenerateBarCode("038000356216", BarcodeLib.TYPE.UPCA, fileName);
+                        base64string = GenerateBarCode("038000356216", BarcodeLib.TYPE.UPCA, fileName);
                         break;
                     }
                 case "UPC E barcode":
                     {
                         string fileName = barCodeSelection + template.Name + ".png";
-                        GenerateBarCode("02345673", BarcodeLib.TYPE.UPCE, fileName);
+                        base64string = GenerateBarCode("02345673", BarcodeLib.TYPE.UPCE, fileName);
                         break;
                     }
                 case "OMR barcode":
@@ -101,7 +109,7 @@ namespace TemplatePortal.Controllers
                 case "QR Code":
                     {
                         string fileName = barCodeSelection + template.Name + ".png";
-                        GenerateQRCode("www.opteamix.com", fileName);
+                        base64string = GenerateQRCode("www.opteamix.com", fileName);
                         break;
                     }
                 default:
@@ -109,7 +117,7 @@ namespace TemplatePortal.Controllers
                         break;
                     }
             }
-            return SendEmail.SendEmailToProvider(template, userName, password, hostName);
+            return SendEmail.SendEmailToProvider(template, userName, password, hostName,base64string);
         }
 
         //[HttpPost("[action]")]
@@ -137,7 +145,7 @@ namespace TemplatePortal.Controllers
         //    return Ok();
         //}
 
-        public void GenerateQRCode(string text, string fileName)
+        public string GenerateQRCode(string text, string fileName)
         {
             string folder = _configuration.GetValue<string>("Image:Path");
             QRCodeGenerator QrGenerator = new QRCodeGenerator();
@@ -150,36 +158,27 @@ namespace TemplatePortal.Controllers
             //byte[] BitmapArray = QrBitmap.ToByteArray();
             string path = folder + fileName;
             System.IO.File.WriteAllBytes(path, BitmapArray);
-            //string QrUri = string.Format("data:image/png;base64,{0}", Convert.ToBase64String(BitmapArray));
-            //ViewBag.QrCodeUri = QrUri;
+            return string.Format("data:image/png;base64,{0}", Convert.ToBase64String(BitmapArray));
         }
 
-        public void GenerateBarCode(string text, BarcodeLib.TYPE type, string fileName)
+        public string GenerateBarCode(string text, BarcodeLib.TYPE type, string fileName)
         {
             string folder = _configuration.GetValue<string>("Image:Path");
             BarcodeLib.Barcode b = new BarcodeLib.Barcode();
             Image img = b.Encode(type, text, Color.Black, Color.White, 290, 120);
             string path = folder + fileName;
             img.Save(path);
-
-
-        }
-
-        private List<string> GetImagesInHTMLString(string htmlString)
-        {
-            List<string> images = new List<string>();
-            string pattern = @"<(img)\b[^>]*>";
-
-            Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
-            MatchCollection matches = rgx.Matches(htmlString);
-
-            for (int i = 0, l = matches.Count; i < l; i++)
+            using (MemoryStream memoryStream = new MemoryStream())
             {
-                images.Add(matches[i].Value);
+                img.Save(memoryStream, ImageFormat.Png);
+                Byte[] bytes = memoryStream.ToArray();
+                string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+                base64String  = "data:image/png;base64," + base64String;
+                return base64String;
             }
-
-            return images;
         }
+
+        
 
         public class FileModel
         {

@@ -17,5 +17,7 @@ namespace DAL
         public List<TemplateFields> SaveTemplateFields(TemplateFields templateFields);
 
         public Template GetTemplate(long templateId);
+
+        public bool DeleteTemplate(Template template);
     }
 }

@@ -28,6 +28,8 @@ namespace DAL
             if (template.Id == 0)
             {
                 template.CreatedDate = DateTime.UtcNow;
+                template.StatusId = template.StatusId == 0 ? 1 : template.StatusId;
+                 
                 _context.Template.Add(template);
             }
             else
@@ -60,6 +62,13 @@ namespace DAL
         public Template GetTemplate(long templateId)
         {
             return _context.Template.Include(x => x.templateFields).FirstOrDefault(x => x.Id == templateId);
+        }
+
+        public bool DeleteTemplate(Template template)
+        {
+            _context.Template.Remove(template);
+            _context.SaveChanges();
+            return true;
         }
     }
 }

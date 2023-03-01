@@ -9,15 +9,16 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/css/Template.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
     <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.min.css"
           rel="stylesheet" type="text/css" />
-    @*<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>*@
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/translations/de.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <script type="text/javascript">
        var url = '@Url.Action("TemplateDetails", "Template")';
 
@@ -58,9 +59,7 @@
 
         }
 
-        function getStatusName(statusId) {
 
-        }
     </script>
 </head>
 <body>
@@ -78,7 +77,7 @@
             <th>Template ID</th>
             <th>Type</th>
             <th>Channels</th>
-            <th>Langugae</th>
+            <th>Language</th>
             <th>Status</th>
             <th>Created Date</th>
             <th></th>
@@ -93,7 +92,8 @@
                 <td> @customer.StatusName</td>
                 <td>@customer.CreatedDate</td>
                 <td>
-                    <button id="btnTemplateDetails" onclick="loadTemplateDetails(@customer.Id)">Edit Template</button>
+                    <p class="submit"><input type="submit" id="btnTemplateDetails" onclick="loadTemplateDetails(@customer.Id)" value="Edit Template" /> 
+                    </p>
                 </td>
             </tr>
         }

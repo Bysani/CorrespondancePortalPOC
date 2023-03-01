@@ -53,6 +53,26 @@ namespace TemplatePortal
 
             app.UseAuthorization();
 
+            var allowedOrigins = new HashSet<string>(new string[] {
+                "http://localhost:3000",
+                "https://localhost:3000",
+                "http://localhost:5000",
+                "http://192.168.1.6:90",
+                "http://192.168.1.6",
+                "http://images.opteamix.com",
+                "null"});
+
+            app.UseCors(x =>
+                x.AllowAnyMethod()
+                    .AllowCredentials()
+                    .SetPreflightMaxAge(TimeSpan.FromHours(1))
+                    .AllowAnyHeader()
+                    .WithExposedHeaders(
+                        "Request-Context"
+                    )
+                    .WithOrigins(allowedOrigins.ToArray())
+            );
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

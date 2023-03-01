@@ -12,6 +12,7 @@
     <script type="text/javascript">
 
         function saveTemplateDetails() {
+            $("#success-alert").hide();
             var template = new Object();
             template.Id = 0;
             template.name = $("#txtName").val();
@@ -23,8 +24,9 @@
                 url: '/Template/SaveTemplate',
                 data: template,
                 success: function (result) {
-                    alert('Successfully created Data ');
-                    
+                    $("#success-alert").show();
+                    setTimeout(function () { $("#success-alert").hide(); }, 2000);
+                   window.location.href = "@Url.Action("TemplateList", "Template")";
                 },
                 error: function () {
                     alert('Failed to receive the Data');
@@ -36,21 +38,22 @@
 
         function getSelectedValue() {
             $("#txtStatusId").val(document.getElementById("selStatus").value)
-            
+
         }
     </script>
 </head>
 <body>
     <input type="text" id="txtStatusId" style="display:none;" />
+    <div class="alert alert-success" id="success-alert" style="display:none"> Template Created Successfully</div>
     <div class="login">
-        <h1>Template Create</h1>
+        <h1>Create Template</h1>
         <p>
             <label>
                 Type :
             </label>
             <input type="text" id="txtName" value="" placeholder="Type" required>
         </p>
-        <div  style="width:200px;">
+        <div style="width:200px;">
             <label>
                 Status :
             </label>
@@ -65,12 +68,12 @@
                     Closed
                 </option>
             </select>
-            </div>
-            <p class="submit"><input type="submit" id="btnTemplateSave" name="commit" onclick="saveTemplateDetails()" value="Create"></p>
-            <hr />
-
-
         </div>
+        <p class="submit"><input type="submit" id="btnTemplateSave" name="commit" onclick="saveTemplateDetails()" value="Create"></p>
+        <hr />
+
+
+    </div>
 
 </body>
 </html>

@@ -51,8 +51,6 @@ C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcor
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcoreapp3.1\DAL.pdb
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcoreapp3.1\EfDBContext.pdb
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\staticwebassets\TemplatePortal.StaticWebAssets.Manifest.cache
-C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\staticwebassets\TemplatePortal.StaticWebAssets.xml
-C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\scopedcss\bundle\TemplatePortal.styles.css
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\TemplatePortal.TagHelpers.input.cache
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\TemplatePortal.TagHelpers.output.cache
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\TemplatePortal.RazorCoreGenerate.cache
@@ -87,3 +85,5 @@ C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcor
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
 C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\Razor\Views\Template\CreateTemplate.cshtml.g.cs
+C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\staticwebassets\TemplatePortal.StaticWebAssets.xml
+C:\Users\bchaithanya\source\repos\TemplatePortal\TemplatePortal\obj\Debug\netcoreapp3.1\scopedcss\bundle\TemplatePortal.styles.css

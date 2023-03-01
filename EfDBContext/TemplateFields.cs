@@ -11,7 +11,7 @@ namespace EfDBContext
         public string DataType { get; set; }
         public long TemplateId { get; set; }
         public bool IsMandatory { get; set; }
-
+        public bool IsSelected { get; set; }
         public virtual Template Template { get; set; }
     }
 }

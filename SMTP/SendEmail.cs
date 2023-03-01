@@ -12,7 +12,7 @@ namespace SMTP
     public static class SendEmail
     {
 
-        public static bool SendEmailToProvider(Template template, string userName, string password, string hostName)
+        public static bool SendEmailToProvider(Template template, string userName, string password, string hostName,string base64String)
         {
 
             string from = userName;
@@ -20,10 +20,10 @@ namespace SMTP
             {
                 mail.Subject = "Test Email";
                 mail.IsBodyHtml = true;
-                mail.Body = ReplacePlaceHoldersInTemplateContent(template.Body, null);
+                mail.Body = GetImagesInHTMLString(template.Body,base64String);
+                mail.Body = ReplacePlaceHoldersInTemplateContent(mail.Body, template.templateFields);
                 mail.Body = mail.Body.Replace("figure", "div");
                 mail.Body = ReplaceClasswithInlineStyle(mail.Body);
-               // mail.Body = htmlBody;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = hostName;
                 smtp.EnableSsl = true;
@@ -38,10 +38,10 @@ namespace SMTP
 
         }
 
-        public static string ReplacePlaceHoldersInTemplateContent(string templateBody, List<Dictionary<string, string>> replacements)
+        public static string ReplacePlaceHoldersInTemplateContent(string templateBody, ICollection<TemplateFields> templateFields)
         {
-            replacements = new List<Dictionary<string, string>>();
-            replacements.Add(GetPlaceHolderValues());
+            var replacements = new List<Dictionary<string, string>>();
+            replacements.Add(GetPlaceHolderValues(templateFields));
             foreach (var replacement in replacements)
             {
                 var pattern = $"#(?<placeholder>{string.Join("|", replacement.Keys)})#";
@@ -50,23 +50,62 @@ namespace SMTP
             return templateBody;
         }
 
-        public static Dictionary<string, string> GetPlaceHolderValues()
+        public static Dictionary<string, string> GetPlaceHolderValues(ICollection<TemplateFields> templateFields)
         {
-            var replacementDetails = new Dictionary<string, string>
-                                            {
-                                                {"ProviderName", "Test"},
-                                                { "ProjectName", "Opteamix" }
-                                            };
+            var replacementDetails = new Dictionary<string, string>();
+            if (templateFields != null && templateFields.Count > 0)
+            {
+                foreach(var templateField in templateFields)
+                {
+                    replacementDetails.Add(templateField.Title, templateField.Title);
+                }
+            }
             return replacementDetails;
         }
         public static string ReplaceClasswithInlineStyle(string htmlString)
         {
-            string[] htmlParts = htmlString.Split("image image-style-align-right");
-            string firstPart = htmlParts[0].Replace("\"", "");
-            firstPart = firstPart.Replace("class", "");
-            firstPart = firstPart.Replace("<div =", "<div style=float:right;");
-            string finalHtmlBody = firstPart + htmlParts[1];
-            return finalHtmlBody;
+            var matches = Regex.Matches(htmlString, @"<div.*?</div>", RegexOptions.Singleline);
+            if(matches != null && matches.Count > 0)
+            {
+                foreach(var mat in matches)
+                {
+                    string match = mat.ToString();
+                    string updatedMatch = match;
+                    if (updatedMatch.Contains("image-style-align-right") || updatedMatch.Contains("image-style-block-align-right"))
+                    {
+                        updatedMatch = updatedMatch.Replace("<div ", "<div style=float:right;");
+                    }
+                    if(updatedMatch.Contains("image-style-block-align-left") || updatedMatch.Contains("image-style-align-left"))
+                    {
+                        updatedMatch = updatedMatch.Replace("<div ", "<div style=float:left;");
+                    }
+                    htmlString = htmlString.Replace(match, updatedMatch);
+                    
+                }
+            }
+            
+            return htmlString;
+        }
+
+        private static string GetImagesInHTMLString(string htmlString, string base64String)
+        {
+           
+            string pattern = @"<(img)\b[^>]*>";
+
+            Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
+            MatchCollection matches = rgx.Matches(htmlString);
+
+            for (int i = 0, l = matches.Count; i < l; i++)
+            {
+                if (matches[i].Value.Contains("imgDummyBarCode"))
+                {
+                   htmlString =  htmlString.Replace(matches[i].Value, "<img src="+base64String+" />");
+                }
+                
+            }
+            //htmlString =   htmlString.Replace("<img src=http://192.168.1.6:90/Images//DummyBarCode.jpg id=imgDummyBarCode onclick=openPreferences()>", base64String);
+
+            return htmlString;
         }
     }
 }

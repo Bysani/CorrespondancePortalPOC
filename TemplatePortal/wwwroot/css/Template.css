@@ -222,3 +222,90 @@ input {
 .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+.optionbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+    .optionbox select {
+        background: #527881;
+        color: #fff;
+        padding: 10px;
+        width: 250px;
+        height: 50px;
+        border: none;
+        font-size: 20px;
+        /*box-shadow: 0 5px 48px rgb(93, 15, 9);
+        -webkit-appearance: button;
+        outline: none;*/
+    }
+
+.optionbox:before {
+    content: '\f358';
+    font-family: "Font Awesome 5 free";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background: #E91E63;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 30px;
+    pointer-events: none;
+}
+
+.optionbox:hover:before {
+    background: #c72059;
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    width: auto;
+    padding: 0 10px;
+    border-bottom: none;
+}
+
+/*button[type=button] {
+    padding: 0 18px;
+    height: 29px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #527881;
+    text-shadow: 0 1px #e3f1f1;
+    background: #cde5ef;
+    border: 1px solid;
+    border-color: #b4ccce #b3c0c8 #9eb9c2;
+    border-radius: 16px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+    -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+    button[type=button]:active {
+        background: #cde5ef;
+        border-color: #9eb9c2 #b3c0c8 #b4ccce;
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    }*/
